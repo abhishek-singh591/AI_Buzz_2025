@@ -50,7 +50,7 @@
 sudo apt update
 sudo apt install python3.10 python3.10-venv
 ```
-### Create and Activate Virtual Environment
+### 2️⃣ Create and Activate Virtual Environment
 ```bash
 python3.10 -m venv <env_name>
 source <env_name>/bin/activate
@@ -78,6 +78,10 @@ pip install -r requirements.txt
 We are using Qwen3-14B : https://huggingface.co/Qwen/Qwen3-14B model as default model.
 ```bash
 bash run.sh --repo https://github.com/<your-username>/<your-repo> --model <huggingface-model-path>
+```
+Example:-
+```bash
+bash run.sh --repo https://github.com/pallets/flask --model Qwen/Qwen3-14B
 ```
 
 ### 🌐 View the Streamlit App
