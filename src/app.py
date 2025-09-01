@@ -76,10 +76,11 @@ if run_btn:
     for title, md in result["pages"].items():
         with st.expander(title, expanded=False):
             for block in split_markdown_into_segments(md):
-                content = block.get("content", "")
+                content = block.get("content")
                 if block.get("type") == "text":
                     st.markdown(content)
                 elif block.get("type") == "mermaid":
+                    safe_mermaid = fix_escaped_html_tags(content)
                     components.html(f'''
                         <html>
                         <head>
@@ -89,7 +90,9 @@ if run_btn:
                             </script>
                         </head>
                         <body>
-                            <div class="mermaid">{fix_escaped_html_tags(content)}</div>
+                            <div class="mermaid">
+                                {safe_mermaid}
+                            </div>
                         </body>
                         </html>
                     ''', height=500)
