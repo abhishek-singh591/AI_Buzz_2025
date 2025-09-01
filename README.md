@@ -48,8 +48,8 @@ sudo apt install python3.10 python3.10-venv
 ```
 ### Create and Activate Virtual Environment
 ```bash
-python3.10 -m venv qeff_env
-source qeff_env/bin/activate
+python3.10 -m venv <env_name>
+source <env_name>/bin/activate
 ```
 ### 3️⃣ Clone the Repository
 ```bash
