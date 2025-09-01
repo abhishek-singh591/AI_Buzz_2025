@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Usage:
-# bash run.sh --repo <Your-Github-Repo> --model <Huggingface-model-path>
+# bash run.sh --repo https://github.com/pallets/flask --model Qwen/Qwen3-14B
 
 # Parse arguments
 while [[ "$#" -gt 0 ]]; do
