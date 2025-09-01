@@ -3,7 +3,7 @@
 ## Idea Details
 - Team Name: DocuGenie
 - Idea Title: AI-Enabled Automatic Documentation System for Internal Qualcomm Repositories.​
-- Idea url: [<!-- Link to your idea in AI Buzz portal -->](https://aibuzz.qualcomm.com/idea/4507)
+- Idea url: [Click here](https://aibuzz.qualcomm.com/idea/4507)
 - Team Members
   - Abhishek Kumar Singh (sabhis)
   - Sharvari Medhe (smedhe)
@@ -19,23 +19,71 @@
 
 
 ## Implementation Summary
-<!-- 
-Write a summary of what you have developed and how user can navigate the code base. 
-Mention important files/functions to check, limitations of current implementation and future scope.
--->
+This project implements a modular Retrieval-Augmented Generation (RAG) pipeline designed to process source code repositories and prepare them for semantic search or LLM-based question answering. It extracts meaningful content from code files, splits them into context-aware chunks, and wraps them into structured Document objects enriched with metadata.
+
+### models Used:
+1. Qwen-3-14B: A large language model developed by Tencent AI Lab, specifically designed for Chinese text generation tasks, including semantic search and question-answering. The model has a 3.14-billion parameter size and is capable of generating human-like text.
+2. Llama-3.1-8B-Instruct: A large language model for instruction tuning developed by Meta AI, specifically designed for various tasks, including semantic search and question-answering. The model has an 8-billion parameter size and is capable of generating human-like text based on given instructions.
+3. ImagineChat: The Imagine Chat model is a pre-trained large language model (LLM) specifically designed for text generation tasks. This model is useful for tasks such as chatbots, question answering, and text summarization. It is a powerful tool for generating human-like text and can be integrated into various applications that require natural language processing capabilities.
+
+
+
 
 ## Installation & Setup steps
-<!-- 
-Mention in detail how a reviewer can install and run your project. Prefereable include a script to automate the setup.
-Make sure to include the pre-requisite packages/assumptions (e.g. Java, Android Studio) in detail.
--->
+
+## 📋 Prerequisites
+
+- Python 3.10 installed
+- Git installed
+- API Key and Endpoint from [Cirrascale Inference Cloud](https://aisuite.cirrascale.com/account/api-keys)
+
+---
+
+## ⚙️ Setup Instructions
+### 1️⃣ Install Python 3.10 
+
+```bash
+sudo apt update
+sudo apt install python3.10 python3.10-venv
+```
+### Create and Activate Virtual Environment
+```bash
+python3.10 -m venv qeff_env
+source qeff_env/bin/activate
+```
+### 3️⃣ Clone the Repository
+```bash
+git clone https://github.com/<your-username>/<your-repo>.git
+```
+
+### 🔐 API Configuration
+Create your Imagine API Key and Endpoint from Cirrascale.
+
+Then, create a .env file in the root directory:
+```bash
+IMAGINE_API_KEY=your_api_key_here
+IMAGINE_API_ENDPOINT=https://your_endpoint_here
+```
+### 📦 Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 🚀 Run the Documentation Generator
+
+```bash
+bash run.sh --repo https://github.com/<your-username>/<your-repo> --model <huggingface-model-path>
+```
+
+### 🌐 View the Streamlit App
+Once the app launches, open the URL provided in your terminal:
+
+```bash
+http://localhost:8501
+```
 
 ## Expected output / behaviour
-<!-- 
-Provide details of expected behaviour and output.
-Mention how the reviewer can validate the prototype is doing what it is intended to.
-If your prototype requires some files / data for evaluation, make sure to provide the files along with instructions on using them.
--->
+Upon execution, the system scans the specified repository directory, identifies supported source files (e.g., .py, .js, .md, etc.), and loads their contents. These files are then split into context-aware chunks using a recursive text splitter, preserving metadata such as relative file paths for traceability. The final output is a list of structured Document objects, each representing a meaningful segment of code or text, ready for embedding and retrieval. This enables accurate and context-grounded responses in downstream applications like chatbots or semantic search.
 
 ## Any additional steps required for running
 - [x] NA
