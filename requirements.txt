@@ -123,7 +123,6 @@ python-engineio==4.12.2
 python-socketio==5.13.0
 pytz==2025.2
 PyYAML==6.0.2
-qgenie-sdk==0.2.2
 referencing==0.36.2
 regex==2025.8.29
 requests==2.32.5
