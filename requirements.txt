@@ -43,7 +43,7 @@ httpx-sse==0.4.1
 huggingface-hub==0.34.4
 humanfriendly==10.0
 idna==3.10
-imagine-sdk @ file:///home/tanisha/AI_buzz/imagine_sdk-0.4.2-py3-none-any.whl
+imagine-sdk @ file:///~/imagine_sdk-0.4.2-py3-none-any.whl
 importlib_metadata==8.7.0
 importlib_resources==6.5.2
 Jinja2==3.1.6

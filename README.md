@@ -91,6 +91,9 @@ Upon execution, the system scans the specified repository directory, identifies 
 Mention any additional requirements here. If not, leave the NA.
 -->
 
+## Future Goals
+
+
 ## Submission Checklist
 - [x] Recorded video
 - [x] Readme updated with required fields
