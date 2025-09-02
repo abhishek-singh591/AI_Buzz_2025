@@ -83,14 +83,14 @@ if run_btn:
                     st.markdown(part)
                 else:
                     stmd.st_mermaid(part, key=f"mermaid_{i}_{title}")
-                st.download_button(
-                    label="⬇️ Download Markdown",
-                    data=md.encode("utf-8"),
-                    file_name=f"{title.lower().replace(' ', '_')}.md",
-                    mime="text/markdown",
-                    use_container_width=True,
-                    key=f"download_markdown_{i}_{title}",
-                )
+            st.download_button(
+                label="⬇️ Download Markdown",
+                data=md.encode("utf-8"),
+                file_name=f"{title.lower().replace(' ', '_')}.md",
+                mime="text/markdown",
+                use_container_width=True,
+                key=f"download_markdown_{i}_{title}",
+            )
 
 # Chat interface
 if st.session_state.wiki_generated:
