@@ -48,7 +48,7 @@ _llm = pipeline(
     "text-generation",
     model=model_id,
     torch_dtype="auto",
-    device_map="cuda:1",
+    device_map="cuda:0",
 )
 
 def call_llm_structure(prompt: str, chunk_size: int = 4096, max_chunks: int = 5) -> str:

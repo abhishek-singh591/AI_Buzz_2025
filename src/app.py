@@ -4,12 +4,13 @@ import streamlit.components.v1 as components
 import streamlit_mermaid as stmd
 import sys
 import argparse
+from html import unescape
 import re
 from functools import partial
 from imagine.langchain import ImagineChat
 from langchain_core.messages import HumanMessage, AIMessage
 
-from utils import split_markdown_into_segments, fix_escaped_html_tags
+from utils import split_markdown_into_segments
 from wiki_generator import generate_wiki_from_repo
 from chat_bot import build_graph
 from rag_utils import query_vector_store
@@ -74,37 +75,22 @@ if run_btn:
 
     st.subheader("📑 Generated Wiki Pages (Markdown)")
     for title, md in result["pages"].items():
-        with st.expander(title, expanded=False):
-            for block in split_markdown_into_segments(md):
-                content = block.get("content")
-                if block.get("type") == "text":
-                    st.markdown(content)
-                elif block.get("type") == "mermaid":
-                    safe_mermaid = fix_escaped_html_tags(content)
-                    components.html(f'''
-                        <html>
-                        <head>
-                            <script type="module">
-                                import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-                                mermaid.initialize({{ startOnLoad: true }});
-                            </script>
-                        </head>
-                        <body>
-                            <div class="mermaid">
-                                {safe_mermaid}
-                            </div>
-                        </body>
-                        </html>
-                    ''', height=500)
+        with st.expander(title, expanded=True):
+            pattern = r"```mermaid([\s\S]*?)```"
+            parts = re.split(pattern, md)
+            for i, part in enumerate(parts):
+                if i % 2 == 0:
+                    st.markdown(part)
                 else:
-                    st.error(f"Unknown block type: {block.get('type')}")
-            st.download_button(
-                label="⬇️ Download Markdown",
-                data=md.encode("utf-8"),
-                file_name=f"{title.lower().replace(' ', '_')}.md",
-                mime="text/markdown",
-                use_container_width=True,
-            )
+                    stmd.st_mermaid(part, key=f"mermaid_{i}_{title}")
+                st.download_button(
+                    label="⬇️ Download Markdown",
+                    data=md.encode("utf-8"),
+                    file_name=f"{title.lower().replace(' ', '_')}.md",
+                    mime="text/markdown",
+                    use_container_width=True,
+                    key=f"download_markdown_{i}_{title}",
+                )
 
 # Chat interface
 if st.session_state.wiki_generated:

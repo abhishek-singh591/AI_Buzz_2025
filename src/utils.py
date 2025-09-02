@@ -1,7 +1,7 @@
 # utils_markdown.py
 import re
 from typing import List, Dict
-from html import unescape
+
 
 MERMAID_BLOCK_RE = re.compile(
     r"""
@@ -36,21 +36,3 @@ def split_markdown_into_segments(md: str) -> list[dict[str, str]]:
 
     return segments
 
-
-def fix_escaped_html_tags(mermaid_code: str) -> str:
-    # Replace common escaped HTML entities
-    # replacements = {
-    #     r'--&gt;': '-->',
-    #     r'--&gt;&gt;': '-->>',
-    #     r'--&lt;': '--<',
-    #     r'&lt;--': '<--',
-    #     r'&lt;--&lt;': '<<--',
-    #     r'&gt;': '>',
-    #     r'&lt;': '<',
-    #     r'&amp;': '&',
-    # }
- 
-    # for pattern, replacement in replacements.items():
-    #     mermaid_code = re.sub(pattern, replacement, mermaid_code)
- 
-    return unescape(mermaid_code)
