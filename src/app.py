@@ -67,35 +67,54 @@ if run_btn:
     st.session_state.app = app
     st.session_state.wiki_generated = True
 
-    st.subheader("📂 Repository File Tree")
-    render_tree_diagram(result["file_tree"])
+    # Sidebar navigation
 
-    st.subheader("📄 README Preview")
-    st.code(result["readme"][:4000] + ("\n…" if len(result["readme"]) > 4000 else ""), language="markdown")
 
-    st.subheader("📑 Generated Wiki Pages (Markdown)")
-    for title, md in result["pages"].items():
-        with st.expander(title, expanded=True):
-            pattern = r"```mermaid([\s\S]*?)```"
-            parts = re.split(pattern, md)
-            for i, part in enumerate(parts):
-                if i % 2 == 0:
-                    st.markdown(part)
-                else:
-                    stmd.st_mermaid(part, key=f"mermaid_{i}_{title}")
-            st.download_button(
-                label="⬇️ Download Markdown",
-                data=md.encode("utf-8"),
-                file_name=f"{title.lower().replace(' ', '_')}.md",
-                mime="text/markdown",
-                use_container_width=True,
-                key=f"download_markdown_{i}_{title}",
-            )
 
-# Chat interface
-if st.session_state.wiki_generated:
-    user_input = st.chat_input("Ask a question about your codebase...")
+# Back to documents button
+if "chat_active" not in st.session_state:
+    st.session_state.chat_active = False
+
+
+# Main content rendering
+if st.session_state.get("wiki_generated"):
+    wiki_titles = list(st.session_state.result["pages"].keys()) if st.session_state.get("wiki_generated") else []
+    static_sections = ["📂 File Tree", "📄 README"]
+    sidebar_options = static_sections + [f"📑 {title}" for title in wiki_titles]
+    selected_view = st.sidebar.radio("Go to section:", sidebar_options)
+    if selected_view == "📂 File Tree":
+        st.subheader("📂 Repository File Tree")
+        render_tree_diagram(st.session_state.result["file_tree"])
+
+    elif selected_view == "📄 README":
+        st.subheader("📄 README Preview")
+        st.code(st.session_state.result["readme"][:4000] + ("\n…" if len(st.session_state.result["readme"]) > 4000 else ""), language="markdown")
+
+        
+
+    elif selected_view.startswith("📑 "):
+        title = selected_view.replace("📑 ", "")
+        md = st.session_state.result["pages"][title]
+        st.subheader(f"📑 {title}")
+        pattern = r"```mermaid([\s\S]*?)```"
+        parts = re.split(pattern, md)
+        for i, part in enumerate(parts):
+            if i % 2 == 0:
+                st.markdown(part)
+            else:
+                stmd.st_mermaid(part, key=f"mermaid_{i}_{title}")
+        st.download_button(
+            label="⬇️ Download Markdown",
+            data=md.encode("utf-8"),
+            file_name=f"{title.lower().replace(' ', '_')}.md",
+            mime="text/markdown",
+            use_container_width=True,
+            key=f"download_markdown_{title}",
+        )
+    st.subheader("💬 Ask a question about your codebase")
+    user_input = st.chat_input("Ask your question...")
     if user_input:
+        st.session_state.chat_active = True
         st.session_state.chat_history.append({"role": "user", "content": user_input})
         state = st.session_state.app.invoke({"question": user_input})
         context = state.get("context", "")
@@ -107,30 +126,14 @@ if st.session_state.wiki_generated:
         reply_text = chat_model.generate([message_history]).generations[0][0].text
         st.session_state.chat_history.append({"role": "assistant", "content": reply_text})
 
-        col1, col2 = st.columns([1, 1])
-        with col1:
+        if st.session_state.chat_active:
             st.subheader("🤖 Chatbot")
             for msg in st.session_state.chat_history:
                 st.chat_message(msg["role"]).write(msg["content"])
-        with col2:
-            st.subheader("📂 Repository File Tree")
-            render_tree_diagram(st.session_state.result["file_tree"])
-            st.subheader("📄 README Preview")
-            st.code(st.session_state.result["readme"][:4000] + ("\n…" if len(st.session_state.result["readme"]) > 4000 else ""), language="markdown")
-            st.subheader("📑 Generated Wiki Pages (Markdown)")
-            for title, md in st.session_state.result["pages"].items():
-                with st.expander(title, expanded=False):
-                    st.markdown(md)
-                    st.download_button(
-                        label="⬇️ Download Markdown",
-                        data=md.encode("utf-8"),
-                        file_name=f"{title.lower().replace(' ', '_')}.md",
-                        mime="text/markdown",
-                        use_container_width=True,
-                    )
-
-if not st.session_state.wiki_generated:
+        
+else:
     st.info("Enter a repo URL and click **Generate Wiki** to begin.")
+
 
 # Utility to clean LLM output
 def clean_llm_output(text: str) -> str:
