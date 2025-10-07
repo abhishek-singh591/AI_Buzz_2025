@@ -1,0 +1,283 @@
+<wiki_structure>
+  <title>Wiki – quic/efficient-transformers</title>
+  <description>Comprehensive documentation for the Efficient Transformers library, covering its purpose, installation, architecture, core features, model integration, examples, and extensibility.</description>
+  <sections>
+    <section id="section-1">
+      <title>Overview</title>
+      <pages>
+        <page_ref>page-1</page_ref>
+        <page_ref>page-2</page_ref>
+        <page_ref>page-3</page_ref>
+        <page_ref>page-4</page_ref>
+      </pages>
+    </section>
+    <section id="section-2">
+      <title>Installation and Setup</title>
+      <pages>
+        <page_ref>page-5</page_ref>
+      </pages>
+    </section>
+    <section id="section-3">
+      <title>Core Architecture</title>
+      <pages>
+        <page_ref>page-6</page_ref>
+        <page_ref>page-7</page_ref>
+      </pages>
+    </section>
+    <section id="section-4">
+      <title>Model Integration</title>
+      <pages>
+        <page_ref>page-8</page_ref>
+      </pages>
+    </section>
+    <section id="section-5">
+      <title>Core Features</title>
+      <pages>
+        <page_ref>page-9</page_ref>
+        <page_ref>page-10</page_ref>
+      </pages>
+    </section>
+    <section id="section-6">
+      <title>Examples and Notebooks</title>
+      <pages>
+        <page_ref>page-11</page_ref>
+        <page_ref>page-12</page_ref>
+        <page_ref>page-13</page_ref>
+        <page_ref>page-14</page_ref>
+      </pages>
+    </section>
+    <section id="section-7">
+      <title>Extensibility and Customization</title>
+      <pages>
+        <page_ref>page-15</page_ref>
+        <page_ref>page-16</page_ref>
+      </pages>
+    </section>
+    <section id="section-8">
+      <title>Backend Systems</title>
+      <pages>
+        <page_ref>page-17</page_ref>
+      </pages>
+    </section>
+    <section id="section-9">
+      <title>Data Management/Flow</title>
+      <pages>
+        <page_ref>page-18</page_ref>
+      </pages>
+    </section>
+  </sections>
+  <pages>
+    <page id="page-1">
+      <title>Project Overview</title>
+      <description>High‑level summary of the Efficient Transformers library, its goals, and primary capabilities.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>LICENSE</file_path>
+        <file_path>README.md</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-1</parent_section>
+    </page>
+    <page id="page-2">
+      <title>Library Overview</title>
+      <description>Introduction to the core Python package, key modules, and entry points of the Efficient Transformers library.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>QEfficient/__init__.py</file_path>
+        <file_path>QEfficient/base/modeling_qeff.py</file_path>
+        <file_path>QEfficient/transformers/models/modeling_auto.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-1</parent_section>
+    </page>
+    <page id="page-3">
+      <title>Notebooks Overview</title>
+      <description>Summary of the Jupyter notebooks that demonstrate model optimization, export, and inference workflows.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>notebooks/QEfficientGPT2.ipynb</file_path>
+        <file_path>notebooks/QEfficientMPT.ipynb</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-1</parent_section>
+    </page>
+    <page id="page-4">
+      <title>Repository Scripts Overview</title>
+      <description>High‑level description of the utility scripts package, its purpose, and organization.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>scripts/__init__.py</file_path>
+        <file_path>scripts/perplexity_computation/__init__.py</file_path>
+        <file_path>scripts/replicate_kv_head/__init__.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-1</parent_section>
+    </page>
+    <page id="page-5">
+      <title>Installation and Setup Guide</title>
+      <description>Step‑by‑step instructions for installing the library, building optional components, and configuring the runtime.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>Dockerfile</file_path>
+        <file_path>pyproject.toml</file_path>
+        <file_path>.pre-commit-config.yaml</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-2</parent_section>
+    </page>
+    <page id="page-6">
+      <title>Core Architectural Components</title>
+      <description>Description of the main architectural building blocks, package layout, and tooling used to create optimized transformer models.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>.gitignore</file_path>
+        <file_path>.pre-commit-config.yaml</file_path>
+        <file_path>MANIFEST.in</file_path>
+        <file_path>pyproject.toml</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-3</parent_section>
+    </page>
+    <page id="page-7">
+      <title>System Architecture</title>
+      <description>Explanation of the layered architecture: base model class, transformer transforms, and QNN compilation pipeline.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>QEfficient/base/modeling_qeff.py</file_path>
+        <file_path>QEfficient/compile/qnn_compiler.py</file_path>
+        <file_path>QEfficient/transformers/transform.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-3</parent_section>
+    </page>
+    <page id="page-8">
+      <title>Adding New Model Support</title>
+      <description>Guidelines and utilities for integrating a new transformer model into the QEfficient framework.</description>
+      <importance>medium</importance>
+      <relevant_files>
+        <file_path>QEfficient/transformers/models/gemma3/modeling_gemma3.py</file_path>
+        <file_path>QEfficient/transformers/models/llama4/modeling_llama4.py</file_path>
+        <file_path>QEfficient/transformers/models/modeling_auto.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-4</parent_section>
+    </page>
+    <page id="page-9">
+      <title>Quantization Support</title>
+      <description>Built‑in quantization back‑ends (AWQ, GPTQ, FP8) and utilities to apply them to models.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>QEfficient/transformers/quantizers/quantizer_awq.py</file_path>
+        <file_path>QEfficient/transformers/quantizers/quantizer_compressed_tensors.py</file_path>
+        <file_path>QEfficient/transformers/quantizers/quantizer_gptq.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-5</parent_section>
+    </page>
+    <page id="page-10">
+      <title>Custom Operator Implementations</title>
+      <description>Custom ONNX operators (scatter/gather, RMSNorm) used for efficient execution on Cloud AI 100.</description>
+      <importance>medium</importance>
+      <relevant_files>
+        <file_path>QEfficient/customop/ctx_scatter_gather.py</file_path>
+        <file_path>QEfficient/customop/ctx_scatter_gather_cb.py</file_path>
+        <file_path>QEfficient/customop/rms_norm.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-5</parent_section>
+    </page>
+    <page id="page-11">
+      <title>Speculative Decoding Demonstrations</title>
+      <description>Examples showing how to run multi‑project speculative decoding, draft‑based decoding, and PLD decoding on Qualcomm Cloud AI 100.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>examples/draft_spd_inference.py</file_path>
+        <file_path>examples/multiprojs_spd_inference.py</file_path>
+        <file_path>examples/pld_spd_inference.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-6</parent_section>
+    </page>
+    <page id="page-12">
+      <title>Vision‑Language Model Inference Examples</title>
+      <description>Inference scripts for multimodal models such as InternVL, Granite Vision, and Llama‑4 multi‑image.</description>
+      <importance>medium</importance>
+      <relevant_files>
+        <file_path>examples/granite_example/granite_vision_inference.py</file_path>
+        <file_path>examples/intern_example/internvl_inference.py</file_path>
+        <file_path>examples/llama4_multi_image_example.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-6</parent_section>
+    </page>
+    <page id="page-13">
+      <title>QEfficientMPT Notebook</title>
+      <description>Notebook demonstrating efficient inference for the MPT model family, including weight patching and precision lowering.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>notebooks/QEfficientMPT.ipynb</file_path>
+        <file_path>notebooks/__init__.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-6</parent_section>
+    </page>
+    <page id="page-14">
+      <title>QEfficientGPT2 Notebook</title>
+      <description>Notebook showing optimization and inference of GPT‑2 using the Efficient Transformers workflow.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>notebooks/QEfficientGPT2.ipynb</file_path>
+        <file_path>notebooks/__init__.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-6</parent_section>
+    </page>
+    <page id="page-15">
+      <title>PEFT LoRA Integration</title>
+      <description>Support for parameter‑efficient fine‑tuning via LoRA adapters, including auto‑wrappers and transforms.</description>
+      <importance>medium</importance>
+      <relevant_files>
+        <file_path>QEfficient/peft/auto.py</file_path>
+        <file_path>QEfficient/peft/lora/auto.py</file_path>
+        <file_path>QEfficient/peft/lora/pytorch_transforms.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-7</parent_section>
+    </page>
+    <page id="page-16">
+      <title>Notebook Helper Functions</title>
+      <description>Utility functions provided in the notebooks package that simplify model loading, tokenization, and result visualization.</description>
+      <importance>low</importance>
+      <relevant_files>
+        <file_path>notebooks/__init__.py</file_path>
+        <file_path>notebooks/QEfficientGPT2.ipynb</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-7</parent_section>
+    </page>
+    <page id="page-17">
+      <title>Compilation Pipeline</title>
+      <description>End‑to‑end compilation steps from a PyTorch model to a QNN‑compatible binary for Cloud AI 100.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>QEfficient/cloud/compile.py</file_path>
+        <file_path>QEfficient/compile/compile_helper.py</file_path>
+        <file_path>QEfficient/compile/qnn_compiler.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-8</parent_section>
+    </page>
+    <page id="page-18">
+      <title>Finetuning Data Utilities</title>
+      <description>Helpers for dataset preparation, collators, and device‑aware data loading for fine‑tuning workflows.</description>
+      <importance>medium</importance>
+      <relevant_files>
+        <file_path>QEfficient/finetune/dataset/custom_dataset.py</file_path>
+        <file_path>QEfficient/finetune/utils/dataset_utils.py</file_path>
+        <file_path>QEfficient/finetune/utils/device_map.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-9</parent_section>
+    </page>
+  </pages>
+</wiki_structure>

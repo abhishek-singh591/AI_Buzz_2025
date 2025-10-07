@@ -1,0 +1,117 @@
+<partial_wiki>
+  <sections>
+    <section id="sec-docs-1">
+      <title>overview</title>
+      <pages>
+        <page id="page-docs-1">
+          <title>Project Overview</title>
+          <description>High‑level summary of the Efficient Transformers library, its goals, and primary capabilities.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>docs/README.md</file_path>
+            <file_path>docs/source/introduction.md</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-docs-2</related>
+          </related_pages>
+        </page>
+        <page id="page-docs-2">
+          <title>Installation and Setup</title>
+          <description>Step‑by‑step instructions to install dependencies, configure the environment, and verify the installation.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>docs/source/installation.md</file_path>
+            <file_path>docs/requirements.txt</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-docs-1</related>
+            <related>page-docs-3</related>
+          </related_pages>
+        </page>
+        <page id="page-docs-3">
+          <title>Quick Start Guide</title>
+          <description>Getting started with the library: loading a model, performing inference, and basic profiling.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>docs/source/quick_start.md</file_path>
+            <file_path>docs/source/qeff_autoclasses.md</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-docs-2</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-docs-2</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-docs-2">
+      <title>system architecture</title>
+      <pages>
+        <page id="page-docs-4">
+          <title>Core Features</title>
+          <description>Detailed description of the main performance‑enhancing features such as low‑precision graph transforms, KV‑cache handling, and weight patching.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>docs/source/supported_features.rst</file_path>
+            <file_path>docs/source/features_enablement.md</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-docs-5</related>
+          </related_pages>
+        </page>
+        <page id="page-docs-5">
+          <title>Model Integration</title>
+          <description>Guidelines for integrating new pre‑trained models, including weight mapping, exporter usage, and ONNX conversion.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>docs/source/reference.md</file_path>
+            <file_path>docs/source/qeff_autoclasses.md</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-docs-4</related>
+            <related>page-docs-6</related>
+          </related_pages>
+        </page>
+        <page id="page-docs-6">
+          <title>CLI and API Usage</title>
+          <description>Explanation of the command‑line interface, programmatic API entry points, and validation utilities.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>docs/source/cli_api.md</file_path>
+            <file_path>docs/source/validate.md</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-docs-5</related>
+          </related_pages>
+        </page>
+        <page id="page-docs-7">
+          <title>Fine‑tuning Workflow</title>
+          <description>Procedures and scripts for fine‑tuning supported models, including gradient checkpointing and adapter handling.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>docs/source/finetune.md</file_path>
+            <file_path>docs/source/validate.md</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-docs-6</related>
+          </related_pages>
+        </page>
+        <page id="page-docs-8">
+          <title>Release Documentation</title>
+          <description>Chronological release notes, supported model list, and changelog details.</description>
+          <importance>low</importance>
+          <relevant_files>
+            <file_path>docs/source/release_docs.md</file_path>
+            <file_path>docs/source/blogs.md</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-docs-4</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections />
+    </section>
+  </sections>
+</partial_wiki>

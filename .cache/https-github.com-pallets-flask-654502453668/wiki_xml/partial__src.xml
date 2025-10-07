@@ -1,0 +1,153 @@
+<partial_wiki>
+  <sections>
+    <section id="sec-src-1">
+      <title>overview</title>
+      <pages>
+        <page id="page-src-1">
+          <title>Flask Package Overview</title>
+          <description>High‑level description of Flask’s purpose, core package layout and primary entry points.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>src/flask/__init__.py</file_path>
+            <file_path>src/flask/app.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-src-2</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-src-2</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-src-2">
+      <title>deployment/infrastructure</title>
+      <pages>
+        <page id="page-src-2">
+          <title>CLI and Application Startup</title>
+          <description>How the Flask command‑line interface discovers and launches an application, including the FlaskGroup and script handling.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>src/flask/cli.py</file_path>
+            <file_path>src/flask/__main__.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-src-3</related>
+          </related_pages>
+        </page>
+
+        <page id="page-src-3">
+          <title>Configuration Management</title>
+          <description>Mechanisms for loading, accessing, and overriding configuration values via the Config class and helper utilities.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>src/flask/config.py</file_path>
+            <file_path>src/flask/helpers.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-src-4</related>
+          </related_pages>
+        </page>
+
+        <page id="page-src-4">
+          <title>Debug and Environment Helpers</title>
+          <description>Utilities that enable debug mode, error handling, and environment‑based configuration.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>src/flask/debughelpers.py</file_path>
+            <file_path>src/flask/helpers.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-src-5</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-src-3</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-src-3">
+      <title>system architecture</title>
+      <pages>
+        <page id="page-src-5">
+          <title>Application Core (Flask class)</title>
+          <description>Definition of the central Flask application object, its initialization flow and key methods.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>src/flask/app.py</file_path>
+            <file_path>src/flask/sansio/app.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-src-6</related>
+          </related_pages>
+        </page>
+
+        <page id="page-src-6">
+          <title>Request and Response Wrappers</title>
+          <description>Implementation of the Request and Response objects that adapt Werkzeug primitives for Flask.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>src/flask/wrappers.py</file_path>
+            <file_path>src/flask/ctx.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-src-7</related>
+          </related_pages>
+        </page>
+
+        <page id="page-src-7">
+          <title>Blueprint System</title>
+          <description>Modular application components via Blueprint objects, including registration and URL routing.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>src/flask/blueprints.py</file_path>
+            <file_path>src/flask/sansio/blueprints.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-src-8</related>
+          </related_pages>
+        </page>
+
+        <page id="page-src-8">
+          <title>Templating Integration</title>
+          <description>Connection between Flask and Jinja2, template loading, context processors, and rendering helpers.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>src/flask/templating.py</file_path>
+            <file_path>src/flask/sansio/scaffold.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-src-9</related>
+          </related_pages>
+        </page>
+
+        <page id="page-src-9">
+          <title>Session Management</title>
+          <description>Secure cookie‑based session handling, session interface abstraction and related utilities.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>src/flask/sessions.py</file_path>
+            <file_path>src/flask/json/tag.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-src-10</related>
+          </related_pages>
+        </page>
+
+        <page id="page-src-10">
+          <title>Testing Utilities</title>
+          <description>Tools for creating test clients, CLI test runners, and request builders to facilitate application testing.</description>
+          <importance>low</importance>
+          <relevant_files>
+            <file_path>src/flask/testing.py</file_path>
+            <file_path>src/flask/cli.py</file_path>
+          </relevant_files>
+          <related_pages />
+        </page>
+      </pages>
+      <subsections />
+    </section>
+  </sections>
+</partial_wiki>

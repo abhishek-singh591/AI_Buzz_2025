@@ -1,0 +1,67 @@
+<partial_wiki>
+  <sections>
+    <section id="sec-tests-1">
+      <title>overview</title>
+      <pages>
+        <page id="page-tests-1">
+          <title>Test Suite Overview</title>
+          <description>Summarizes the purpose of Flask’s test suite, the main testing strategies, and the high‑level coverage of core framework features.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>tests/test_basic.py</file_path>
+            <file_path>tests/test_views.py</file_path>
+            <file_path>tests/conftest.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-tests-2</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-tests-2</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-tests-2">
+      <title>core features</title>
+      <pages>
+        <page id="page-tests-2">
+          <title>Running and Configuring the Tests</title>
+          <description>Details how to install test dependencies, configure the environment, and execute the Flask test suite with pytest and coverage.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>tests/conftest.py</file_path>
+            <file_path>tests/test_helpers.py</file_path>
+            <file_path>tests/test_config.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-tests-3</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-tests-3</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-tests-3">
+      <title>system architecture</title>
+      <pages>
+        <page id="page-tests-3">
+          <title>Test Architecture and Organization</title>
+          <description>Explains the structural layout of the test package, including fixtures, type‑checking tests, async support, CLI testing, and blueprint examples.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>tests/type_check/typing_route.py</file_path>
+            <file_path>tests/type_check/typing_error_handler.py</file_path>
+            <file_path>tests/test_async.py</file_path>
+            <file_path>tests/test_cli.py</file_path>
+            <file_path>tests/test_blueprints.py</file_path>
+          </relevant_files>
+          <related_pages />
+        </page>
+      </pages>
+      <subsections />
+    </section>
+  </sections>
+</partial_wiki>

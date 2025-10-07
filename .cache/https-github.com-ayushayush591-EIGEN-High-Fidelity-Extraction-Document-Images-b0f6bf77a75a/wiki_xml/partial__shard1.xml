@@ -1,0 +1,61 @@
+<partial_wiki>
+  <sections>
+    <section id="sec-shard1-1">
+      <title>Overview</title>
+      <pages>
+        <page id="page-shard1-1">
+          <title>Introduction to EIGEN</title>
+          <description>EIGEN is a project for high-fidelity information extraction from document images. This page provides an overview of the project, including its goals and objectives.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>README.md</file_path>
+            <file_path>requirements.txt</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-shard1-2</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-shard1-2</section_ref>
+      </subsections>
+    </section>
+    <section id="sec-shard1-2">
+      <title>Core Features</title>
+      <pages>
+        <page id="page-shard1-2">
+          <title>Training and Labeling Functions</title>
+          <description>This page describes the training and labeling functions used in the EIGEN project, including the main.py file and its associated functions.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>main.py</file_path>
+            <file_path>train.py</file_path>
+            <file_path>train_copy.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-shard1-3</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-shard1-3</section_ref>
+      </subsections>
+    </section>
+    <section id="sec-shard1-3">
+      <title>Examples and Notebooks</title>
+      <pages>
+        <page id="page-shard1-3">
+          <title>Demo Notebooks</title>
+          <description>This page provides examples of demo notebooks used in the EIGEN project, including the cords_demo.ipynb and nh_demo.ipynb files.</description>
+          <importance>low</importance>
+          <relevant_files>
+            <file_path>cords_demo.ipynb</file_path>
+            <file_path>nh_demo.ipynb</file_path>
+            <file_path>NH_cage.ipynb</file_path>
+            <file_path>Cage_cords.ipynb</file_path>
+          </relevant_files>
+        </page>
+      </pages>
+    </section>
+  </sections>
+</partial_wiki>

@@ -1,0 +1,136 @@
+<partial_wiki>
+  <sections>
+    <section id="sec-shard1-1">
+      <title>overview</title>
+      <pages>
+        <page id="page-shard1-1">
+          <title>Project Overview</title>
+          <description>High‑level summary of Flask’s purpose, philosophy, and licensing.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>README.md</file_path>
+            <file_path>LICENSE.txt</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-shard1-2</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-shard1-2</section_ref>
+        <section_ref>sec-shard1-3</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-shard1-2">
+      <title>installation and setup</title>
+      <pages>
+        <page id="page-shard1-2">
+          <title>Getting Started</title>
+          <description>Steps to install Flask, set up a virtual environment, and run the development server.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>README.md</file_path>
+            <file_path>pyproject.toml</file_path>
+            <file_path>.gitignore</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-shard1-3</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-shard1-3</section_ref>
+        <section_ref>sec-shard1-4</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-shard1-3">
+      <title>system architecture</title>
+      <pages>
+        <page id="page-shard1-3">
+          <title>Architectural Overview</title>
+          <description>Explanation of Flask’s core components, build configuration, and documentation pipeline.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>.readthedocs.yaml</file_path>
+            <file_path>.pre-commit-config.yaml</file_path>
+            <file_path>pyproject.toml</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-shard1-4</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-shard1-4</section_ref>
+        <section_ref>sec-shard1-5</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-shard1-4">
+      <title>extensibility and customization</title>
+      <pages>
+        <page id="page-shard1-4">
+          <title>Development Tools Configuration</title>
+          <description>Details of linting, formatting, and editor settings that support extensible development.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>.pre-commit-config.yaml</file_path>
+            <file_path>.editorconfig</file_path>
+            <file_path>.gitignore</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-shard1-5</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-shard1-5</section_ref>
+        <section_ref>sec-shard1-6</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-shard1-5">
+      <title>deployment/infrastructure</title>
+      <pages>
+        <page id="page-shard1-5">
+          <title>Documentation Build Setup</title>
+          <description>Configuration for Read the Docs integration and dependency locking for reproducible builds.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>.readthedocs.yaml</file_path>
+            <file_path>uv.lock</file_path>
+            <file_path>pyproject.toml</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-shard1-6</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-shard1-6</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-shard1-6">
+      <title>core features</title>
+      <pages>
+        <page id="page-shard1-6">
+          <title>Release History and Dependencies</title>
+          <description>Chronological change log and key dependency specifications defining Flask’s core features.</description>
+          <importance>low</importance>
+          <relevant_files>
+            <file_path>CHANGES.rst</file_path>
+            <file_path>pyproject.toml</file_path>
+            <file_path>LICENSE.txt</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-shard1-1</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections/>
+    </section>
+  </sections>
+</partial_wiki>

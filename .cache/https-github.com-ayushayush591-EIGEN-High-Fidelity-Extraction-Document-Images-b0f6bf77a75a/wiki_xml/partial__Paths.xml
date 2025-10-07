@@ -1,0 +1,21 @@
+<partial_wiki>
+  <sections>
+    <section id="sec-Paths-1">
+      <title>Overview</title>
+      <pages>
+        <page id="page-Paths-1">
+          <title>Introduction to Paths</title>
+          <description>This page provides an overview of the Paths directory, which contains all the pickle files needed for training.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>Paths/readme.txt</file_path>
+          </relevant_files>
+          <related_pages>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+      </subsections>
+    </section>
+  </sections>
+</partial_wiki>

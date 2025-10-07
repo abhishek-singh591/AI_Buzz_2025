@@ -1,0 +1,106 @@
+<partial_wiki>
+  <sections>
+    <section id="sec-scripts-1">
+      <title>Overview</title>
+      <pages>
+        <page id="page-scripts-1">
+          <title>Repository Scripts Overview</title>
+          <description>Provides a high‑level summary of the scripts package, its purpose, and how the modules are organized.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>scripts/__init__.py</file_path>
+            <file_path>scripts/perplexity_computation/__init__.py</file_path>
+            <file_path>scripts/replicate_kv_head/__init__.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-scripts-2</related>
+            <related>page-scripts-3</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-scripts-2</section_ref>
+        <section_ref>sec-scripts-3</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-scripts-2">
+      <title>Installation and Setup</title>
+      <pages>
+        <page id="page-scripts-2">
+          <title>Setting up Perplexity Computation Script</title>
+          <description>Instructions for installing dependencies and running the perplexity calculation utility.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>scripts/perplexity_computation/calculate_perplexity.py</file_path>
+            <file_path>scripts/perplexity_computation/__init__.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-scripts-5</related>
+          </related_pages>
+        </page>
+
+        <page id="page-scripts-3">
+          <title>Fine‑tuning Script Execution Guide</title>
+          <description>Step‑by‑step guide to launch the fine‑tuning workflow using the provided run_ft_model script.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>scripts/finetune/run_ft_model.py</file_path>
+            <file_path>scripts/finetune/__init__.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-scripts-1</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-scripts-3</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-scripts-3">
+      <title>Core Architecture</title>
+      <pages>
+        <page id="page-scripts-4">
+          <title>KV Head Replication Mechanism</title>
+          <description>Details the algorithm and implementation for duplicating KV‑head weights to support multi‑head configurations.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>scripts/replicate_kv_head/replicate_kv_heads.py</file_path>
+            <file_path>scripts/replicate_kv_head/__init__.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-scripts-6</related>
+          </related_pages>
+        </page>
+
+        <page id="page-scripts-5">
+          <title>Perplexity Computation Engine</title>
+          <description>Explains the core inference sessions and data loading pipeline used to compute language model perplexity.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>scripts/perplexity_computation/calculate_perplexity.py</file_path>
+            <file_path>scripts/perplexity_computation/__init__.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-scripts-2</related>
+          </related_pages>
+        </page>
+
+        <page id="page-scripts-6">
+          <title>CI/CD Pipeline Configuration</title>
+          <description>Outlines the Jenkinsfile setup and the specializations JSON used for continuous integration and model specialization.</description>
+          <importance>low</importance>
+          <relevant_files>
+            <file_path>scripts/Jenkinsfile</file_path>
+            <file_path>scripts/specializations.json</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-scripts-4</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections />
+    </section>
+  </sections>
+</partial_wiki>

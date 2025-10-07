@@ -1,0 +1,136 @@
+<partial_wiki>
+  <sections>
+    <section id="sec-examples-1">
+      <title>overview</title>
+      <pages>
+        <page id="page-examples-1">
+          <title>Repository Overview</title>
+          <description>High‑level description of the example projects bundled with Flask, including the tutorial blog app, Celery background task demo, and JavaScript AJAX showcase.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>examples/tutorial/README.rst</file_path>
+            <file_path>examples/celery/README.md</file_path>
+            <file_path>examples/javascript/README.rst</file_path>
+          </relevant_files>
+          <related_pages />
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-examples-2</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-examples-2">
+      <title>examples and notebooks</title>
+      <pages>
+        <page id="page-examples-2">
+          <title>Flaskr Tutorial Application</title>
+          <description>Complete blog application demonstrating routing, SQLite database handling, authentication, and template rendering.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>examples/tutorial/flaskr/__init__.py</file_path>
+            <file_path>examples/tutorial/flaskr/blog.py</file_path>
+            <file_path>examples/tutorial/flaskr/auth.py</file_path>
+            <file_path>examples/tutorial/flaskr/db.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-examples-5</related>
+            <related>page-examples-6</related>
+          </related_pages>
+        </page>
+
+        <page id="page-examples-3">
+          <title>Celery Background Task Example</title>
+          <description>Shows how to configure Celery with Flask, define asynchronous tasks, and expose HTTP endpoints for task submission and result polling.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>examples/celery/src/task_app/__init__.py</file_path>
+            <file_path>examples/celery/src/task_app/tasks.py</file_path>
+            <file_path>examples/celery/src/task_app/views.py</file_path>
+            <file_path>examples/celery/make_celery.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-examples-7</related>
+          </related_pages>
+        </page>
+
+        <page id="page-examples-4">
+          <title>JavaScript AJAX Example</title>
+          <description>Demonstrates client‑side AJAX interactions using fetch, jQuery, and XHR to call Flask endpoints, illustrating dynamic content updates.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>examples/javascript/js_example/views.py</file_path>
+            <file_path>examples/javascript/js_example/templates/fetch.html</file_path>
+            <file_path>examples/javascript/js_example/templates/jquery.html</file_path>
+            <file_path>examples/javascript/js_example/templates/xhr.html</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-examples-8</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-examples-3</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-examples-3">
+      <title>system architecture</title>
+      <pages>
+        <page id="page-examples-5">
+          <title>Database Management (SQLite) in Flaskr</title>
+          <description>Implementation of SQLite connection handling, schema initialization, and command‑line integration for the tutorial app.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>examples/tutorial/flaskr/db.py</file_path>
+            <file_path>examples/tutorial/flaskr/schema.sql</file_path>
+            <file_path>examples/tutorial/tests/data.sql</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-examples-2</related>
+          </related_pages>
+        </page>
+
+        <page id="page-examples-6">
+          <title>Authentication Blueprint and Login Flow</title>
+          <description>Provides user registration, login, logout, and session management using Flask’s request lifecycle and Werkzeug security utilities.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>examples/tutorial/flaskr/auth.py</file_path>
+            <file_path>examples/tutorial/tests/test_auth.py</file_path>
+            <file_path>examples/tutorial/tests/conftest.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-examples-2</related>
+          </related_pages>
+        </page>
+
+        <page id="page-examples-7">
+          <title>Task Execution and Result Retrieval in Celery Example</title>
+          <description>Defines Celery tasks, their execution logic, and Flask view functions that submit tasks and fetch results.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>examples/celery/src/task_app/tasks.py</file_path>
+            <file_path>examples/celery/src/task_app/views.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-examples-3</related>
+          </related_pages>
+        </page>
+
+        <page id="page-examples-8">
+          <title>Testing Suite Overview</title>
+          <description>Collection of pytest tests covering the Flaskr blog, database utilities, Celery integration, and JavaScript AJAX endpoints.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>examples/tutorial/tests/test_blog.py</file_path>
+            <file_path>examples/tutorial/tests/test_db.py</file_path>
+            <file_path>examples/javascript/tests/test_js_example.py</file_path>
+          </relevant_files>
+          <related_pages />
+        </page>
+      </pages>
+      <subsections />
+    </section>
+  </sections>
+</partial_wiki>

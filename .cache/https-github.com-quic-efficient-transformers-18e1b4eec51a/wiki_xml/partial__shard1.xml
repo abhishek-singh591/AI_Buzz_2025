@@ -1,0 +1,67 @@
+<partial_wiki>
+  <sections>
+    <section id="sec-shard1-1">
+      <title>overview</title>
+      <pages>
+        <page id="page-shard1-1">
+          <title>Project Overview</title>
+          <description>Provides a high‑level summary of the Efficient Transformers library, its purpose, and key capabilities.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>README.md</file_path>
+            <file_path>LICENSE</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-shard1-2</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-shard1-2</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-shard1-2">
+      <title>deployment/infrastructure</title>
+      <pages>
+        <page id="page-shard1-2">
+          <title>Installation and Setup Guide</title>
+          <description>Details the steps required to install the library, configure the environment, and run the provided Docker image.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>Dockerfile</file_path>
+            <file_path>pyproject.toml</file_path>
+            <file_path>.pre-commit-config.yaml</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-shard1-3</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-shard1-3</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-shard1-3">
+      <title>system architecture</title>
+      <pages>
+        <page id="page-shard1-3">
+          <title>Core Architectural Components</title>
+          <description>Describes the main architectural building blocks, packaging layout, and tooling used to create optimized transformer models.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>pyproject.toml</file_path>
+            <file_path>MANIFEST.in</file_path>
+            <file_path>.pre-commit-config.yaml</file_path>
+            <file_path>.gitignore</file_path>
+          </relevant_files>
+          <related_pages>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+      </subsections>
+    </section>
+  </sections>
+</partial_wiki>
