@@ -1,0 +1,182 @@
+<partial_wiki>
+  <sections>
+    <section id="sec-docs-1">
+      <title>overview</title>
+      <pages>
+        <page id="page-docs-1">
+          <title>Flask Project Overview</title>
+          <description>High‑level description of Flask, its purpose, and core concepts.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>docs/index.rst</file_path>
+            <file_path>docs/quickstart.rst</file_path>
+            <file_path>docs/design.rst</file_path>
+          </relevant_files>
+          <related_pages />
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-docs-2</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-docs-2">
+      <title>deployment/infrastructure</title>
+      <pages>
+        <page id="page-docs-2">
+          <title>Installing Flask</title>
+          <description>Step‑by‑step guide to install Flask and its dependencies.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>docs/installation.rst</file_path>
+            <file_path>docs/cli.rst</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-docs-3</related>
+          </related_pages>
+        </page>
+        <page id="page-docs-3">
+          <title>Configuring Flask Application</title>
+          <description>How to configure a Flask app, including environment variables and config objects.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>docs/config.rst</file_path>
+            <file_path>docs/quickstart.rst</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-docs-4</related>
+          </related_pages>
+        </page>
+        <page id="page-docs-4">
+          <title>Running Development Server</title>
+          <description>Running the built‑in development server and understanding its lifecycle.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>docs/server.rst</file_path>
+            <file_path>docs/lifecycle.rst</file_path>
+          </relevant_files>
+          <related_pages />
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-docs-3</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-docs-3">
+      <title>system architecture</title>
+      <pages>
+        <page id="page-docs-5">
+          <title>Application Context and Request Lifecycle</title>
+          <description>Explanation of Flask’s app and request contexts and their lifecycles.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>docs/appcontext.rst</file_path>
+            <file_path>docs/reqcontext.rst</file_path>
+            <file_path>docs/lifecycle.rst</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-docs-6</related>
+          </related_pages>
+        </page>
+        <page id="page-docs-6">
+          <title>Blueprints and Modular Design</title>
+          <description>Using blueprints to structure large applications and enable modularity.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>docs/blueprints.rst</file_path>
+            <file_path>docs/patterns/appdispatch.rst</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-docs-7</related>
+          </related_pages>
+        </page>
+        <page id="page-docs-7">
+          <title>Extension System</title>
+          <description>How Flask extensions are built and integrated into applications.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>docs/extensions.rst</file_path>
+            <file_path>docs/extensiondev.rst</file_path>
+          </relevant_files>
+          <related_pages />
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-docs-4</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-docs-4">
+      <title>extensibility and customization</title>
+      <pages>
+        <page id="page-docs-8">
+          <title>Pattern: App Factories</title>
+          <description>Using factory functions to create configurable Flask applications.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>docs/patterns/appfactories.rst</file_path>
+            <file_path>docs/patterns/viewdecorators.rst</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-docs-9</related>
+          </related_pages>
+        </page>
+        <page id="page-docs-9">
+          <title>Pattern: Template Inheritance</title>
+          <description>Leveraging Jinja template inheritance for DRY HTML layouts.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>docs/patterns/templateinheritance.rst</file_path>
+            <file_path>docs/templating.rst</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-docs-10</related>
+          </related_pages>
+        </page>
+        <page id="page-docs-10">
+          <title>Pattern: Caching</title>
+          <description>Implementing caching strategies using Flask’s caching patterns.</description>
+          <importance>low</importance>
+          <relevant_files>
+            <file_path>docs/patterns/caching.rst</file_path>
+            <file_path>docs/patterns/deferredcallbacks.rst</file_path>
+          </relevant_files>
+          <related_pages />
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-docs-5</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-docs-5">
+      <title>examples and notebooks</title>
+      <pages>
+        <page id="page-docs-11">
+          <title>Tutorial: Flaskr Application</title>
+          <description>Walkthrough of the Flaskr tutorial app, covering setup, views, templates, and database.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>docs/tutorial/index.rst</file_path>
+            <file_path>docs/tutorial/install.rst</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-docs-12</related>
+          </related_pages>
+        </page>
+        <page id="page-docs-12">
+          <title>Pattern Examples</title>
+          <description>Collection of pattern documentation demonstrating common Flask use‑cases.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>docs/patterns/index.rst</file_path>
+            <file_path>docs/patterns/sqlalchemy.rst</file_path>
+          </relevant_files>
+          <related_pages />
+        </page>
+      </pages>
+      <subsections />
+    </section>
+  </sections>
+</partial_wiki>

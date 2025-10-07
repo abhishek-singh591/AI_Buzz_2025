@@ -1,0 +1,391 @@
+<wiki_structure>
+  <title>Flask Wiki</title>
+  <description>A lightweight WSGI web application framework.</description>
+  <sections>
+    <section id="section-1">
+      <title>Overview</title>
+      <pages>
+        <page_ref>page-1</page_ref>
+        <page_ref>page-8</page_ref>
+        <page_ref>page-9</page_ref>
+        <page_ref>page-16</page_ref>
+        <page_ref>page-21</page_ref>
+      </pages>
+    </section>
+    <section id="section-2">
+      <title>Core Features</title>
+      <pages>
+        <page_ref>page-2</page_ref>
+        <page_ref>page-4</page_ref>
+        <page_ref>page-13</page_ref>
+        <page_ref>page-14</page_ref>
+        <page_ref>page-17</page_ref>
+        <page_ref>page-18</page_ref>
+        <page_ref>page-22</page_ref>
+        <page_ref>page-23</page_ref>
+      </pages>
+    </section>
+    <section id="section-3">
+      <title>Deployment/Infrastructure</title>
+      <pages>
+        <page_ref>page-3</page_ref>
+        <page_ref>page-7</page_ref>
+        <page_ref>page-19</page_ref>
+      </pages>
+    </section>
+    <section id="section-4">
+      <title>Backend Systems</title>
+      <pages>
+        <page_ref>page-5</page_ref>
+        <page_ref>page-15</page_ref>
+        <page_ref>page-24</page_ref>
+        <page_ref>page-25</page_ref>
+      </pages>
+    </section>
+    <section id="section-5">
+      <title>Examples and Notebooks</title>
+      <pages>
+        <page_ref>page-6</page_ref>
+        <page_ref>page-10</page_ref>
+        <page_ref>page-11</page_ref>
+        <page_ref>page-12</page_ref>
+        <page_ref>page-20</page_ref>
+        <page_ref>page-26</page_ref>
+      </pages>
+    </section>
+  </sections>
+  <pages>
+    <page id="page-1">
+      <title>Introduction to Flask</title>
+      <description>Flask is a lightweight WSGI web application framework designed to make getting started quick and easy.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>LICENSE.txt</file_path>
+        <file_path>README.md</file_path>
+        <file_path>pyproject.toml</file_path>
+      </relevant_files>
+      <related_pages>
+        <related>page-2</related>
+      </related_pages>
+      <parent_section>section-1</parent_section>
+    </page>
+    <page id="page-2">
+      <title>Project Configuration</title>
+      <description>Configuration files for the project, including pyproject.toml and .editorconfig.</description>
+      <importance>medium</importance>
+      <relevant_files>
+        <file_path>.editorconfig</file_path>
+        <file_path>.gitignore</file_path>
+        <file_path>pyproject.toml</file_path>
+      </relevant_files>
+      <related_pages>
+        <related>page-1</related>
+      </related_pages>
+      <parent_section>section-2</parent_section>
+    </page>
+    <page id="page-3">
+      <title>Readthedocs Configuration</title>
+      <description>Configuration file for Readthedocs, a documentation hosting service.</description>
+      <importance>low</importance>
+      <relevant_files>
+        <file_path>.readthedocs.yaml</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-3</parent_section>
+    </page>
+    <page id="page-4">
+      <title>Testing Framework</title>
+      <description>This page describes the testing framework used in Flask, including the test_client and test_request_context functions.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>tests/conftest.py</file_path>
+        <file_path>tests/test_basic.py</file_path>
+        <file_path>tests/test_testing.py</file_path>
+      </relevant_files>
+      <related_pages>
+        <related>page-5</related>
+      </related_pages>
+      <parent_section>section-2</parent_section>
+    </page>
+    <page id="page-5">
+      <title>Request and Response Objects</title>
+      <description>This page describes the request and response objects used in Flask, including their attributes and methods.</description>
+      <importance>medium</importance>
+      <relevant_files>
+        <file_path>tests/test_appctx.py</file_path>
+        <file_path>tests/test_reqctx.py</file_path>
+        <file_path>tests/test_request.py</file_path>
+      </relevant_files>
+      <related_pages>
+        <related>page-4</related>
+      </related_pages>
+      <parent_section>section-4</parent_section>
+    </page>
+    <page id="page-6">
+      <title>Example Applications</title>
+      <description>This page describes the example applications included in the Flask repository, including the hello world app and the blueprint app.</description>
+      <importance>low</importance>
+      <relevant_files>
+        <file_path>tests/test_apps/blueprintapp/__init__.py</file_path>
+        <file_path>tests/test_apps/blueprintapp/apps/frontend/__init__.py</file_path>
+        <file_path>tests/test_apps/helloworld/hello.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-5</parent_section>
+    </page>
+    <page id="page-7">
+      <title>Testing Deployment Scenarios</title>
+      <description>This page describes how to test deployment scenarios using Flask, including testing with different environments and configurations.</description>
+      <importance>medium</importance>
+      <relevant_files>
+        <file_path>tests/test_apps/.flaskenv</file_path>
+        <file_path>tests/test_apps/cliapp/app.py</file_path>
+        <file_path>tests/test_apps/cliapp/factory.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-3</parent_section>
+    </page>
+    <page id="page-8">
+      <title>Introduction to Flask Testing</title>
+      <description>This page provides an introduction to testing in Flask, including the different types of tests and how to run them.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>tests/conftest.py</file_path>
+        <file_path>tests/test_basic.py</file_path>
+        <file_path>tests/test_testing.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-1</parent_section>
+    </page>
+    <page id="page-9">
+      <title>Introduction to Flask Examples</title>
+      <description>This page provides an introduction to the examples provided in the Flask repository.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>examples/celery/README.md</file_path>
+        <file_path>examples/javascript/README.rst</file_path>
+        <file_path>examples/tutorial/README.rst</file_path>
+      </relevant_files>
+      <related_pages>
+        <related>page-10</related>
+      </related_pages>
+      <parent_section>section-1</parent_section>
+    </page>
+    <page id="page-10">
+      <title>Tutorial Example</title>
+      <description>This page describes the tutorial example provided in the Flask repository.</description>
+      <importance>medium</importance>
+      <relevant_files>
+        <file_path>examples/tutorial/flaskr/__init__.py</file_path>
+        <file_path>examples/tutorial/flaskr/blog.py</file_path>
+        <file_path>examples/tutorial/flaskr/db.py</file_path>
+        <file_path>examples/tutorial/tests/test_blog.py</file_path>
+      </relevant_files>
+      <related_pages>
+        <related>page-9</related>
+      </related_pages>
+      <parent_section>section-5</parent_section>
+    </page>
+    <page id="page-11">
+      <title>Celery Example</title>
+      <description>This page describes the Celery example provided in the Flask repository.</description>
+      <importance>medium</importance>
+      <relevant_files>
+        <file_path>examples/celery/make_celery.py</file_path>
+        <file_path>examples/celery/src/task_app/__init__.py</file_path>
+        <file_path>examples/celery/src/task_app/tasks.py</file_path>
+        <file_path>examples/celery/src/task_app/views.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-5</parent_section>
+    </page>
+    <page id="page-12">
+      <title>JavaScript Example</title>
+      <description>This page describes the JavaScript example provided in the Flask repository.</description>
+      <importance>low</importance>
+      <relevant_files>
+        <file_path>examples/javascript/js_example/__init__.py</file_path>
+        <file_path>examples/javascript/js_example/templates/base.html</file_path>
+        <file_path>examples/javascript/js_example/views.py</file_path>
+        <file_path>examples/javascript/tests/test_js_example.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-5</parent_section>
+    </page>
+    <page id="page-13">
+      <title>Database Management</title>
+      <description>This page describes the database management features provided in the Flask examples.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>examples/tutorial/flaskr/db.py</file_path>
+        <file_path>examples/tutorial/flaskr/schema.sql</file_path>
+        <file_path>examples/tutorial/tests/test_db.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-2</parent_section>
+    </page>
+    <page id="page-14">
+      <title>Authentication and Authorization</title>
+      <description>This page describes the authentication and authorization features provided in the Flask examples.</description>
+      <importance>medium</importance>
+      <relevant_files>
+        <file_path>examples/tutorial/flaskr/auth.py</file_path>
+        <file_path>examples/tutorial/flaskr/templates/auth/login.html</file_path>
+        <file_path>examples/tutorial/tests/test_auth.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-2</parent_section>
+    </page>
+    <page id="page-15">
+      <title>Celery Integration</title>
+      <description>This page describes the Celery integration provided in the Flask examples.</description>
+      <importance>medium</importance>
+      <relevant_files>
+        <file_path>examples/celery/make_celery.py</file_path>
+        <file_path>examples/celery/src/task_app/__init__.py</file_path>
+        <file_path>examples/celery/src/task_app/tasks.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-4</parent_section>
+    </page>
+    <page id="page-16">
+      <title>Introduction to Flask</title>
+      <description>Flask is a lightweight WSGI web application framework designed to make getting started quick and easy.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>docs/index.rst</file_path>
+        <file_path>docs/installation.rst</file_path>
+        <file_path>docs/quickstart.rst</file_path>
+      </relevant_files>
+      <related_pages>
+        <related>page-1</related>
+      </related_pages>
+      <parent_section>section-1</parent_section>
+    </page>
+    <page id="page-17">
+      <title>Request and Response Objects</title>
+      <description>Flask provides a request object to handle HTTP requests and a response object to handle HTTP responses.</description>
+      <importance>medium</importance>
+      <relevant_files>
+        <file_path>docs/reqcontext.rst</file_path>
+        <file_path>docs/server.rst</file_path>
+        <file_path>docs/views.rst</file_path>
+      </relevant_files>
+      <related_pages>
+        <related>page-4</related>
+      </related_pages>
+      <parent_section>section-2</parent_section>
+    </page>
+    <page id="page-18">
+      <title>Template Engine</title>
+      <description>Flask uses the Jinja2 template engine to render templates.</description>
+      <importance>medium</importance>
+      <relevant_files>
+        <file_path>docs/patterns/templateinheritance.rst</file_path>
+        <file_path>docs/templating.rst</file_path>
+        <file_path>docs/tutorial/templates.rst</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-2</parent_section>
+    </page>
+    <page id="page-19">
+      <title>Deploying Flask Applications</title>
+      <description>Flask applications can be deployed using various WSGI servers and deployment tools.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>docs/deploying/gunicorn.rst</file_path>
+        <file_path>docs/deploying/index.rst</file_path>
+        <file_path>docs/deploying/uwsgi.rst</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-3</parent_section>
+    </page>
+    <page id="page-20">
+      <title>Flask Tutorial</title>
+      <description>A step-by-step tutorial on building a Flask application.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>docs/tutorial/index.rst</file_path>
+        <file_path>docs/tutorial/templates.rst</file_path>
+        <file_path>docs/tutorial/views.rst</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-5</parent_section>
+    </page>
+    <page id="page-21">
+      <title>Introduction to Flask</title>
+      <description>Flask is a lightweight WSGI web application framework designed to make getting started quick and easy.</description>
+      <importance>high</importance>
+      <relevant_files>
+        <file_path>src/flask/__init__.py</file_path>
+        <file_path>src/flask/app.py</file_path>
+        <file_path>src/flask/config.py</file_path>
+      </relevant_files>
+      <related_pages>
+        <related>page-1</related>
+      </related_pages>
+      <parent_section>section-1</parent_section>
+    </page>
+    <page id="page-22">
+      <title>Request and Response Objects</title>
+      <description>Flask provides a request object to handle HTTP requests and a response object to handle HTTP responses.</description>
+      <importance>medium</importance>
+      <relevant_files>
+        <file_path>src/flask/globals.py</file_path>
+        <file_path>src/flask/helpers.py</file_path>
+        <file_path>src/flask/wrappers.py</file_path>
+      </relevant_files>
+      <related_pages>
+        <related>page-4</related>
+      </related_pages>
+      <parent_section>section-2</parent_section>
+    </page>
+    <page id="page-23">
+      <title>Template Engine</title>
+      <description>Flask uses the Jinja2 template engine to render templates.</description>
+      <importance>medium</importance>
+      <relevant_files>
+        <file_path>src/flask/helpers.py</file_path>
+        <file_path>src/flask/sansio/scaffold.py</file_path>
+        <file_path>src/flask/templating.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-2</parent_section>
+    </page>
+    <page id="page-24">
+      <title>Application Context</title>
+      <description>Flask provides an application context to handle requests and responses.</description>
+      <importance>medium</importance>
+      <relevant_files>
+        <file_path>src/flask/app.py</file_path>
+        <file_path>src/flask/ctx.py</file_path>
+        <file_path>src/flask/globals.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-4</parent_section>
+    </page>
+    <page id="page-25">
+      <title>Signals</title>
+      <description>Flask provides a signal system to handle events.</description>
+      <importance>low</importance>
+      <relevant_files>
+        <file_path>src/flask/app.py</file_path>
+        <file_path>src/flask/signals.py</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-4</parent_section>
+    </page>
+    <page id="page-26">
+      <title>Example Application</title>
+      <description>An example application using Flask.</description>
+      <importance>low</importance>
+      <relevant_files>
+        <file_path>src/flask/app.py</file_path>
+        <file_path>src/flask/config.py</file_path>
+        <file_path>src/flask/sansio/README.md</file_path>
+      </relevant_files>
+      <related_pages />
+      <parent_section>section-5</parent_section>
+    </page>
+  </pages>
+</wiki_structure>

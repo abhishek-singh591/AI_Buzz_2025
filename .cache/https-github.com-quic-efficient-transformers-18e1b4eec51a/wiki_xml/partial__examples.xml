@@ -1,0 +1,148 @@
+<partial_wiki>
+  <sections>
+    <section id="sec-examples-1">
+      <title>overview</title>
+      <pages>
+        <page id="page-examples-1">
+          <title>Efficient Transformers Repository Overview</title>
+          <description>High‑level summary of the Efficient Transformers library, its purpose, and primary capabilities.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>examples/__init__.py</file_path>
+            <file_path>examples/multiprojs_spd_inference.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-examples-2</related>
+            <related>page-examples-3</related>
+            <related>page-examples-4</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-examples-2</section_ref>
+        <section_ref>sec-examples-3</section_ref>
+        <section_ref>sec-examples-4</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-examples-2">
+      <title>deployment/infrastructure</title>
+      <pages>
+        <page id="page-examples-2">
+          <title>Installation and Setup Guide</title>
+          <description>Step‑by‑step instructions for installing the library, building the optional C++ components, and configuring the runtime.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>examples/cpp_execution/CMakeLists.txt</file_path>
+            <file_path>examples/cpp_execution/text_inference_using_cpp.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-examples-8</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections />
+    </section>
+
+    <section id="sec-examples-3">
+      <title>system architecture</title>
+      <pages>
+        <page id="page-examples-3">
+          <title>Core Architecture and Key Components</title>
+          <description>Explanation of the main architectural blocks such as CloudAI100 execution info, speculative decoding pipelines, and model export utilities.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>examples/multiprojs_spd_inference.py</file_path>
+            <file_path>examples/draft_spd_inference.py</file_path>
+            <file_path>examples/pld_spd_inference.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-examples-4</related>
+            <related>page-examples-5</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections />
+    </section>
+
+    <section id="sec-examples-4">
+      <title>examples and notebooks</title>
+      <pages>
+        <page id="page-examples-4">
+          <title>Speculative Decoding (SpD) Demonstrations</title>
+          <description>Shows how to run multi‑project speculative decoding, draft‑based decoding, and PLD decoding on Qualcomm Cloud AI 100.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>examples/multiprojs_spd_inference.py</file_path>
+            <file_path>examples/draft_spd_inference.py</file_path>
+            <file_path>examples/pld_spd_inference.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-examples-3</related>
+          </related_pages>
+        </page>
+
+        <page id="page-examples-5">
+          <title>Vision‑Language Model Inference Examples</title>
+          <description>Inference scripts for multi‑modal models such as InternVL, Granite Vision, and Llama‑4 multi‑image.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>examples/intern_example/internvl_inference.py</file_path>
+            <file_path>examples/granite_example/granite_vision_inference.py</file_path>
+            <file_path>examples/llama4_multi_image_example.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-examples-3</related>
+          </related_pages>
+        </page>
+
+        <page id="page-examples-6">
+          <title>Embedding and Text‑to‑Text Models</title>
+          <description>Examples for extracting sentence embeddings and performing image‑to‑text generation.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>examples/embedding_model.py</file_path>
+            <file_path>examples/image_text_to_text_inference.py</file_path>
+          </relevant_files>
+          <related_pages />
+        </page>
+
+        <page id="page-examples-7">
+          <title>Speech‑to‑Text Inference</title>
+          <description>Running Whisper‑based speech transcription on the Cloud AI platform.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>examples/speech_to_text/run_whisper_speech_to_text.py</file_path>
+            <file_path>examples/qwen3moe_example/qwen3moe_inference.py</file_path>
+          </relevant_files>
+          <related_pages />
+        </page>
+
+        <page id="page-examples-8">
+          <title>C++ Integration Example</title>
+          <description>Demonstrates how to invoke the exported ONNX model from C++ using the provided buffer utilities.</description>
+          <importance>low</importance>
+          <relevant_files>
+            <file_path>examples/cpp_execution/InferenceSetIOBuffer.cpp</file_path>
+            <file_path>examples/cpp_execution/text_inference_using_cpp.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-examples-2</related>
+          </related_pages>
+        </page>
+
+        <page id="page-examples-9">
+          <title>PEFT and LoRA Model Usage</title>
+          <description>Shows how to load and run parameter‑efficient fine‑tuned (PEFT) and LoRA models with the library.</description>
+          <importance>low</importance>
+          <relevant_files>
+            <file_path>examples/peft_models.py</file_path>
+            <file_path>examples/lora_models.py</file_path>
+          </relevant_files>
+          <related_pages />
+        </page>
+      </pages>
+      <subsections />
+    </section>
+  </sections>
+</partial_wiki>

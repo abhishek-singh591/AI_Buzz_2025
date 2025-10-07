@@ -1,0 +1,112 @@
+<partial_wiki>
+  <sections>
+    <section id="sec-notebooks-1">
+      <title>overview</title>
+      <pages>
+        <page id="page-notebooks-1">
+          <title>Efficient Transformers Notebooks Overview</title>
+          <description>Provides a high‑level summary of the notebook resources bundled with the Efficient Transformers library, outlining their purpose and how they demonstrate model optimization and inference.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>notebooks/QEfficientMPT.ipynb</file_path>
+            <file_path>notebooks/QEfficientGPT2.ipynb</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-notebooks-2</related>
+            <related>page-notebooks-3</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-notebooks-4</section_ref>
+        <section_ref>sec-notebooks-5</section_ref>
+        <section_ref>sec-notebooks-2</section_ref>
+        <section_ref>sec-notebooks-6</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-notebooks-4">
+      <title>deployment/infrastructure</title>
+      <pages>
+        <page id="page-notebooks-4">
+          <title>Setting Up Notebook Environment</title>
+          <description>Step‑by‑step guide to install required dependencies, configure the Python environment, and launch the Efficient Transformers notebooks on various platforms.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>notebooks/__init__.py</file_path>
+            <file_path>notebooks/QEfficientMPT.ipynb</file_path>
+            <file_path>notebooks/QEfficientGPT2.ipynb</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-notebooks-2</related>
+            <related>page-notebooks-3</related>
+          </related_pages>
+        </page>
+      </pages>
+    </section>
+
+    <section id="sec-notebooks-5">
+      <title>system architecture</title>
+      <pages>
+        <page id="page-notebooks-5">
+          <title>Notebook Integration with Efficient Transformers Core</title>
+          <description>Explains how the notebook examples interact with the core library components, including model re‑implementation, graph transformations, and ONNX export pipelines.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>notebooks/__init__.py</file_path>
+            <file_path>notebooks/QEfficientGPT2.ipynb</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-notebooks-1</related>
+          </related_pages>
+        </page>
+      </pages>
+    </section>
+
+    <section id="sec-notebooks-2">
+      <title>examples and notebooks</title>
+      <pages>
+        <page id="page-notebooks-2">
+          <title>QEfficientMPT Notebook</title>
+          <description>Demonstrates efficient inference for the MPT model family, showcasing weight patching, precision lowering, and ONNX export within the notebook.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>notebooks/QEfficientMPT.ipynb</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-notebooks-4</related>
+          </related_pages>
+        </page>
+        <page id="page-notebooks-3">
+          <title>QEfficientGPT2 Notebook</title>
+          <description>Shows how to optimize and run GPT‑2 using the Efficient Transformers workflow, including graph transformations and performance benchmarking.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>notebooks/QEfficientGPT2.ipynb</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-notebooks-4</related>
+          </related_pages>
+        </page>
+      </pages>
+    </section>
+
+    <section id="sec-notebooks-6">
+      <title>extensibility and customization</title>
+      <pages>
+        <page id="page-notebooks-6">
+          <title>Notebook Helper Functions</title>
+          <description>Details the utility functions provided in the notebooks package (__init__.py) that simplify model loading, tokenization, and result visualization.</description>
+          <importance>low</importance>
+          <relevant_files>
+            <file_path>notebooks/__init__.py</file_path>
+            <file_path>notebooks/QEfficientMPT.ipynb</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-notebooks-1</related>
+          </related_pages>
+        </page>
+      </pages>
+    </section>
+  </sections>
+</partial_wiki>

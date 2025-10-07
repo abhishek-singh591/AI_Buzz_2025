@@ -1,0 +1,170 @@
+<partial_wiki>
+  <sections>
+    <section id="sec-tests-1">
+      <title>overview</title>
+      <pages>
+        <page id="page-tests-1">
+          <title>Test Suite Overview</title>
+          <description>Provides a high‑level description of the repository’s test hierarchy, purpose, and coverage.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>tests/README.md</file_path>
+            <file_path>tests/conftest.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-tests-2</related>
+          </related_pages>
+        </page>
+        <page id="page-tests-2">
+          <title>Running the Test Suite</title>
+          <description>Guidelines for setting up the environment and executing the full test collection.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>tests/conftest.py</file_path>
+            <file_path>tests/finetune/reference_data.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-tests-3</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-tests-2</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-tests-2">
+      <title>system architecture</title>
+      <pages>
+        <page id="page-tests-3">
+          <title>Causal Language Model Tests</title>
+          <description>Validates export, compilation, KV‑cache handling, and QNN execution for causal LM models.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>tests/transformers/models/test_causal_lm_models.py</file_path>
+            <file_path>tests/transformers/test_causal_lm.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-tests-4</related>
+          </related_pages>
+        </page>
+
+        <page id="page-tests-4">
+          <title>Embedding Model Tests</title>
+          <description>Ensures embedding models produce consistent outputs across PyTorch, ONNX, and AI100 back‑ends, including pooling configurations.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>tests/transformers/models/test_embedding_models.py</file_path>
+            <file_path>tests/transformers/test_transformer_pytorch_transforms.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-tests-5</related>
+          </related_pages>
+        </page>
+
+        <page id="page-tests-5">
+          <title>Speech Seq2Seq Model Tests</title>
+          <description>Tests end‑to‑end inference for speech‑to‑text sequence‑to‑sequence models, covering PyTorch, KV cache, ONNX, and QNN paths.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>tests/transformers/models/test_speech_seq2seq_models.py</file_path>
+            <file_path>tests/transformers/test_speech_seq2seq.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-tests-6</related>
+          </related_pages>
+        </page>
+
+        <page id="page-tests-6">
+          <title>Image‑Text‑to‑Text Model Tests</title>
+          <description>Validates multimodal models that convert images and text prompts into textual output, including prefix‑caching scenarios.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>tests/transformers/models/test_image_text_to_text_models.py</file_path>
+            <file_path>tests/transformers/models/test_prefix_caching.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-tests-7</related>
+          </related_pages>
+        </page>
+
+        <page id="page-tests-7">
+          <title>PEFT LoRA Integration Tests</title>
+          <description>Checks LoRA‑based Parameter‑Efficient Fine‑Tuning (PEFT) models for compilation, generation, and adapter handling.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>tests/peft/lora/test_lora_model.py</file_path>
+            <file_path>tests/peft/test_peft_model.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-tests-8</related>
+          </related_pages>
+        </page>
+
+        <page id="page-tests-8">
+          <title>Speculative Decoding (SPD) Tests</title>
+          <description>Evaluates draft‑model prefill and spec‑decode inference pipelines, including PLD (parallel look‑ahead) support.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>tests/transformers/spd/test_spd_inference.py</file_path>
+            <file_path>tests/transformers/spd/test_pld_inference.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-tests-9</related>
+          </related_pages>
+        </page>
+
+        <page id="page-tests-9">
+          <title>Cloud Export, Compile, and Inference Tests</title>
+          <description>End‑to‑end verification of model export to Cloud AI 100, compilation, and runtime inference (including FBS and QNN variants).</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>tests/cloud/test_export_compile_execute.py</file_path>
+            <file_path>tests/cloud/test_infer.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-tests-10</related>
+          </related_pages>
+        </page>
+
+        <page id="page-tests-10">
+          <title>Finetuning Workflow Tests</title>
+          <description>Tests the finetuning pipeline on Alpaca data, covering data handling, training loop, and model checkpointing.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>tests/finetune/test_finetune.py</file_path>
+            <file_path>tests/finetune/reference_data.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-tests-11</related>
+          </related_pages>
+        </page>
+
+        <page id="page-tests-11">
+          <title>Base Transformations Tests</title>
+          <description>Validates core PyTorch and ONNX graph transformation utilities used across the library.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>tests/base/test_pytorch_transforms.py</file_path>
+            <file_path>tests/base/test_onnx_transforms.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-tests-12</related>
+          </related_pages>
+        </page>
+
+        <page id="page-tests-12">
+          <title>Hash Utilities Tests</title>
+          <description>Ensures deterministic hashing of configuration dictionaries and model metadata for reproducibility.</description>
+          <importance>low</importance>
+          <relevant_files>
+            <file_path>tests/utils/test_hash_utils.py</file_path>
+            <file_path>tests/base/test_modeling_qeff.py</file_path>
+          </relevant_files>
+          <related_pages />
+        </page>
+      </pages>
+      <subsections />
+    </section>
+  </sections>
+</partial_wiki>

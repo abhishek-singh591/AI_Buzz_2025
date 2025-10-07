@@ -1,0 +1,207 @@
+<partial_wiki>
+  <sections>
+    <section id="sec-QEfficient-1">
+      <title>overview</title>
+      <pages>
+        <page id="page-QEfficient-1">
+          <title>Library Overview</title>
+          <description>High‑level description of the Efficient Transformers library, its purpose and main components.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>QEfficient/__init__.py</file_path>
+            <file_path>QEfficient/base/modeling_qeff.py</file_path>
+            <file_path>QEfficient/transformers/models/modeling_auto.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-QEfficient-3</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections>
+        <section_ref>sec-QEfficient-2</section_ref>
+        <section_ref>sec-QEfficient-3</section_ref>
+        <section_ref>sec-QEfficient-4</section_ref>
+        <section_ref>sec-QEfficient-5</section_ref>
+        <section_ref>sec-QEfficient-6</section_ref>
+        <section_ref>sec-QEfficient-7</section_ref>
+        <section_ref>sec-QEfficient-8</section_ref>
+        <section_ref>sec-QEfficient-9</section_ref>
+      </subsections>
+    </section>
+
+    <section id="sec-QEfficient-2">
+      <title>deployment/infrastructure</title>
+      <pages>
+        <page id="page-QEfficient-2">
+          <title>Setup and Installation</title>
+          <description>Guidelines for installing the package, configuring the environment, and preparing compilation tools.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>QEfficient/__init__.py</file_path>
+            <file_path>QEfficient/utils/_utils.py</file_path>
+            <file_path>QEfficient/compile/compile_helper.py</file_path>
+            <file_path>QEfficient/cloud/export.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-QEfficient-9</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections/>
+    </section>
+
+    <section id="sec-QEfficient-3">
+      <title>system architecture</title>
+      <pages>
+        <page id="page-QEfficient-3">
+          <title>System Architecture</title>
+          <description>Explanation of the core architectural layers: base model class, transformer transforms, and QNN compilation.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>QEfficient/base/modeling_qeff.py</file_path>
+            <file_path>QEfficient/transformers/transform.py</file_path>
+            <file_path>QEfficient/compile/qnn_compiler.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-QEfficient-1</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections/>
+    </section>
+
+    <section id="sec-QEfficient-4">
+      <title>model integration</title>
+      <pages>
+        <page id="page-QEfficient-4">
+          <title>Adding New Model Support</title>
+          <description>Process and utilities for integrating a new transformer model into the QEfficient framework.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>QEfficient/transformers/models/llama4/modeling_llama4.py</file_path>
+            <file_path>QEfficient/transformers/models/gemma3/modeling_gemma3.py</file_path>
+            <file_path>QEfficient/transformers/models/modeling_auto.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-QEfficient-5</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections/>
+    </section>
+
+    <section id="sec-QEfficient-5">
+      <title>core features</title>
+      <pages>
+        <page id="page-QEfficient-5">
+          <title>Quantization Support</title>
+          <description>Built‑in quantization back‑ends (AWQ, GPTQ, FP8) and utilities to apply them to models.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>QEfficient/transformers/quantizers/quantizer_compressed_tensors.py</file_path>
+            <file_path>QEfficient/transformers/quantizers/quantizer_awq.py</file_path>
+            <file_path>QEfficient/transformers/quantizers/quantizer_gptq.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-QEfficient-6</related>
+          </related_pages>
+        </page>
+
+        <page id="page-QEfficient-6">
+          <title>Custom Operator Implementations</title>
+          <description>Custom ONNX operators (scatter/gather, RMSNorm) used for efficient execution on Cloud AI 100.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>QEfficient/customop/ctx_scatter_gather.py</file_path>
+            <file_path>QEfficient/customop/rms_norm.py</file_path>
+            <file_path>QEfficient/customop/ctx_scatter_gather_cb.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-QEfficient-5</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections/>
+    </section>
+
+    <section id="sec-QEfficient-6">
+      <title>examples and notebooks</title>
+      <pages>
+        <page id="page-QEfficient-7">
+          <title>Exporting to Cloud AI 100</title>
+          <description>Workflow to convert HuggingFace models to Cloud AI 100‑compatible ONNX, including post‑processing steps.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>QEfficient/exporter/export_hf_to_cloud_ai_100.py</file_path>
+            <file_path>QEfficient/exporter/export_utils.py</file_path>
+            <file_path>QEfficient/cloud/export.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-QEfficient-9</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections/>
+    </section>
+
+    <section id="sec-QEfficient-7">
+      <title>extensibility and customization</title>
+      <pages>
+        <page id="page-QEfficient-8">
+          <title>PEFT LoRA Integration</title>
+          <description>Support for parameter‑efficient fine‑tuning via LoRA adapters, including auto‑wrappers and transforms.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>QEfficient/peft/auto.py</file_path>
+            <file_path>QEfficient/peft/lora/auto.py</file_path>
+            <file_path>QEfficient/peft/lora/pytorch_transforms.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-QEfficient-6</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections/>
+    </section>
+
+    <section id="sec-QEfficient-8">
+      <title>backend systems</title>
+      <pages>
+        <page id="page-QEfficient-9">
+          <title>Compilation Pipeline</title>
+          <description>End‑to‑end compilation steps from PyTorch model to QNN‑compatible binary for Cloud AI 100.</description>
+          <importance>high</importance>
+          <relevant_files>
+            <file_path>QEfficient/compile/compile_helper.py</file_path>
+            <file_path>QEfficient/compile/qnn_compiler.py</file_path>
+            <file_path>QEfficient/cloud/compile.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-QEfficient-2</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections/>
+    </section>
+
+    <section id="sec-QEfficient-9">
+      <title>data management/flow</title>
+      <pages>
+        <page id="page-QEfficient-10">
+          <title>Finetuning Data Utilities</title>
+          <description>Helpers for dataset preparation, collators, and device‑aware data loading for fine‑tuning.</description>
+          <importance>medium</importance>
+          <relevant_files>
+            <file_path>QEfficient/finetune/utils/dataset_utils.py</file_path>
+            <file_path>QEfficient/finetune/dataset/custom_dataset.py</file_path>
+            <file_path>QEfficient/finetune/utils/device_map.py</file_path>
+          </relevant_files>
+          <related_pages>
+            <related>page-QEfficient-8</related>
+          </related_pages>
+        </page>
+      </pages>
+      <subsections/>
+    </section>
+  </sections>
+</partial_wiki>

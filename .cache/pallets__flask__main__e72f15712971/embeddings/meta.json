@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "source_url": "https://github.com/pallets/flask",
+    "owner": "pallets",
+    "repo": "flask",
+    "branch": "main",
+    "subpath": "",
+    "created_at": "2025-09-28T13:27:42Z",
+    "graph_id": "e72f15712971",
+    "totals": {
+      "files_scanned": 219,
+      "units": 1830
+    }
+  },
+  "units_path": ".cache/pallets__flask__main__e72f15712971/embeddings/units.parquet"
+}
