@@ -1,6 +1,4 @@
 # DocuGenie
-
-```
 # Final Submission for AI Buzz 2025
 
 ## Team: DocuGenie
